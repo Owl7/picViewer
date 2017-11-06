@@ -1,0 +1,181 @@
+{#<div class="navi">#}
+{##}
+{#</div>#}
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>基于bootsnav的简洁多级导航菜</title>
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
+	<link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/font-awesome.4.6.0.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/navi/bootsnav.css">
+	<style type="text/css">
+	body{ background-color:hsla(0,0%,18%,1.00)}
+	.jq22-header h1{ text-align:center; font-size:28px; color:#939393}
+		.navbar-brand{
+		    padding: 29px 15px;
+		    height: auto;
+		}
+		nav.navbar.bootsnav{
+		    border: none;
+		    margin-bottom: 150px;
+		}
+		.navbar-nav{
+		    float: left;
+		}
+		nav.navbar.bootsnav ul.nav > li > a{
+		    color: #474747;
+		    text-transform: uppercase;
+		    padding: 30px;
+		}
+		nav.navbar.bootsnav ul.nav > li:hover{
+		    background: #f4f4f4;
+		}
+		.nav > li:after{
+		    content: "";
+		    width: 0;
+		    height: 5px;
+		    background: #34c9dd;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    transition: all 0.5s ease 0s;
+		}
+		.nav > li:hover:after{
+		    width: 100%;
+		}
+		nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after{
+		    content: "+";
+		    font-family: 'FontAwesome';
+		    font-size: 16px;
+		    font-weight: 500;
+		    position: absolute;
+		    top: 35%;
+		    right: 10%;
+		    transition: all 0.4s ease 0s;
+		}
+		nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{
+		    content: "\f105";
+		    transform: rotate(90deg);
+		}
+		.dropdown-menu.multi-dropdown{
+		    position: absolute;
+		    left: -100% !important;
+		}
+		nav.navbar.bootsnav li.dropdown ul.dropdown-menu{
+		    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		    border: none;
+		}
+		@media only screen and (max-width:990px){
+		    nav.navbar.bootsnav ul.nav > li.dropdown > a.dropdown-toggle:after,
+		    nav.navbar.bootsnav ul.nav > li.dropdown.on > a.dropdown-toggle:after{ content: " "; }
+		    .dropdown-menu.multi-dropdown{ left: 0 !important; }
+		    nav.navbar.bootsnav ul.nav > li:hover{ background: transparent; }
+		    nav.navbar.bootsnav ul.nav > li > a{ margin: 0; }
+		}
+	</style>
+</head>
+<body>
+	<div class="jq22-container">
+		<header class="jq22-header">
+{#			<h1>基于bootsnav的简洁多级导航菜单</h1>#}
+{#            <h1>调整浏览器窗口大小查看效果</h1>#}
+            <div style="height: 30px"></div>
+			<div class="jq22-links">
+			</div>
+		</header>
+            <div class="demo">
+	        <div class="container" style="height: 30px">
+	            <div class="row">
+	                <div class="col-md-12" style="height: 90px">
+	                    <nav class="navbar navbar-default navbar-mobile bootsnav">
+	                        <div class="navbar-header">
+	                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+	                                <i class="fa fa-bars"></i>
+	                            </button>
+	                        </div>
+	                        <div class="collapse navbar-collapse" id="navbar-menu">
+	                            <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+	                                <li><a href="meixiong">首页</a></li>
+{#	                                <li><a href="meixiong">美胸</a></li>#}
+{#	                                <li class="dropdown">#}
+{#	                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shortcodes</a>#}
+{#	                                    <ul class="dropdown-menu">#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li class="dropdown">#}
+{#	                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>#}
+{#	                                            <ul class="dropdown-menu">#}
+{#	                                                <li><a href="#">Custom Menu</a></li>#}
+{#	                                                <li><a href="#">Custom Menu</a></li>#}
+{#	                                                <li class="dropdown">#}
+{#	                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>#}
+{#	                                                    <ul class="dropdown-menu multi-dropdown">#}
+{#	                                                        <li><a href="http://www.jq22.com">Custom Menu</a></li>#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                    </ul>#}
+{#	                                                </li>#}
+{#	                                                <li><a href="#">Custom Menu</a></li>#}
+{#	                                            </ul>#}
+{#	                                        </li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                    </ul>#}
+{#	                                </li>#}
+{#	                                <li class="dropdown">#}
+{#	                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>#}
+{#	                                    <ul class="dropdown-menu">#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li class="dropdown">#}
+{#	                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>#}
+{#	                                            <ul class="dropdown-menu">#}
+{#	                                                <li><a href="#">Custom Menu</a></li>#}
+{#	                                                <li><a href="#">Custom Menu</a></li>#}
+{#	                                                <li class="dropdown">#}
+{#	                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sub Menu</a>#}
+{#	                                                    <ul class="dropdown-menu multi-dropdown">#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                                    </ul>#}
+{#	                                                </li>#}
+{#	                                                <li><a href="#">Custom Menu</a></li>#}
+{#	                                            </ul>#}
+{#	                                        </li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                        <li><a href="#">Custom Menu</a></li>#}
+{#	                                    </ul>#}
+{#	                                </li>#}
+	                                <li><a href="qiaotun">翘臀</a></li>
+                                    <li><a href="neiyi">内衣</a></li>
+	                                <li><a href="qingchun">清纯</a></li>
+                                    <li><a href="zhifu">制服</a></li>
+                                    <li><a href="siwa">丝袜</a></li>
+                                    <li><a href="rihan">日韩</a></li>
+                                    <li><a href="om">欧美</a></li>
+	                            </ul>
+	                        </div>
+	                    </nav>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	</div>
+
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+	<script type="text/javascript" src="/static/js/navi/bootsnav.js"></script>
+</body>
+</html>

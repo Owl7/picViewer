@@ -1,0 +1,31 @@
+/*导航栏*/
+.navi {
+    height: 150px;
+    background-color: brown;
+    width: 100%;
+}
+
+/*底部*/
+.bottom {
+    background-color:hsla(0,0%,18%,1.00);
+    height: 50%;
+    width: 100%;
+}
+
+.bottom h4{ text-align:center; font-size:15px; color:yellow}
+.bottom h1{ text-align:center; font-size:15px; color:#939393}
+
+.foot-cert{ text-align: center }
+.safety a{ color:#9ca4a9; display:inline-block; padding: 0 33px; }
+.safety a:hover,#footer.tips_text a:hover{color:#fff; text-decoration:none; }
+/*.safety i{ background:url(../images/icon-pl_bak.png) no-repeat 0 0; width:23px; height:20px; vertical-align:middle; margin-right:6px; margin-bottom:2px; display:inline-block; }*/
+.safety .icon_safe2{ background-position:-30px 0; }
+.safety .icon_safe3{ background-position:-60px 0; }
+.safety .icon_safe4{ background-position:-85px 0; }
+.safety img{ float:left; position:relative; left:0; top:6px; margin-right:8px; }
+
+/*内容*/
+.content {
+    width: 100%;
+    background-color: bisque;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}Hello World</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+    <!-- Animate.css -->
+	<link rel="stylesheet" href="/static/css/pblCSS/animate.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/static/css/pblCSS/magnific-popup.css">
+	<!-- Salvattore -->
+	<link rel="stylesheet" href="/static/css/pblCSS/salvattore.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/static/css/pblCSS/style.css">
+	<!-- Modernizr JS -->
+	<script src="/static/js/pblJS/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/static/js/pblJS/respond.min.js"></script>
+	<![endif]-->
+
+    <!-- jQuery -->
+	<script src="/static/js/jquery-1.12.4.min.js"></script>
+
+    <style type="text/css">
+
+        *{margin:0;padding:0;list-style-type:none;}
+
+        a,img{border:0;}
+
+        body{background:url(/static/images/blog7year_videobg.png);font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+        /* actGotop */
+
+        .actGotop{position:fixed;_position:absolute;bottom:100px;right:50px;width:150px;height:195px;display:none;}
+
+        .actGotop a,.actGotop a:link{width:150px;height:195px;display:inline-block;background:url(/static/images/blog7year_gotop.png) no-repeat;outline:none;}
+
+        .actGotop a:hover{outline:none;}
+
+    </style>
+
+    <script type="text/javascript">
+    $(function(){
+        $(window).scroll(function() {
+            if($(window).scrollTop() >= 100){
+                $('.actGotop').fadeIn(300);
+            }else{
+                $('.actGotop').fadeOut(300);
+            }
+        });
+        $('.actGotop').click(function(){
+        $('html,body').animate({scrollTop: '0px'}, 800);});
+    });
+    </script>
+
+</head>
+<body>
+
+{% include 'navi.html' %}
+
+{% block content %}
+
+{#    <ul>#}
+{#    {% for link in links %}#}
+{#    <li>{{ link }}</li>#}
+{#    {% endfor %}#}
+{##}
+{#    </ul>#}
+
+
+
+    <div id="fh5co-main" style="padding-top: 0px;">
+        <div class="container">
+            <div class="row">
+                <div id="fh5co-board" data-columns>
+
+                    {% for pic in picList %}
+
+                        <div class="item">
+
+                        <div class="animate-box">
+                            <a href="{{ pic.p_first_link }}" class="image-popup fh5co-board-img" title={{ pic.p_name }}><img src="{{ pic.p_first_link }}" alt="图片显示失败"></a>
+                        </div>
+                        <div class="fh5co-desc">
+                            <a href="pic_viewer/{{ pic.id }}">{{ pic.p_name }}</a>
+                        </div>
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="actGotop"><a href="javascript:;" title="返回顶部"></a></div>
+
+{% endblock %}
+
+{% include 'bottom.html' %}
+
+{% include 'tongji.html' %}
+
+	<!-- Bootstrap -->
+	<script src="/static/js/pblJS/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/static/js/pblJS/jquery.waypoints.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/static/js/pblJS/jquery.magnific-popup.min.js"></script>
+	<!-- Salvattore -->
+	<script src="/static/js/pblJS/salvattore.min.js"></script>
+	<!-- Main JS -->
+	<script src="/static/js/pblJS/main.js"></script>
+
+</body>
+</html>

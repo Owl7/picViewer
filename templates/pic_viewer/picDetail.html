@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{#<html lang="en">#}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+    <!-- Animate.css -->
+	<link rel="stylesheet" href="/static/css/pblCSS/animate.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="/static/css/pblCSS/magnific-popup.css">
+	<!-- Salvattore -->
+	<link rel="stylesheet" href="/static/css/pblCSS/salvattore.css">
+	<!-- Theme Style -->
+	<link rel="stylesheet" href="/static/css/pblCSS/style.css">
+	<!-- Modernizr JS -->
+	<script src="/static/js/pblJS/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="/static/js/pblJS/respond.min.js"></script>
+	<![endif]-->
+
+    <style type="text/css">
+        body{ background-color:hsla(0,0%,18%,1.00)}
+        h1{ text-align:center; font-size:30px; color:#939393}
+    </style>
+
+</head>
+<body>
+    <h1>{{ name }}</h1>
+
+{#    {% include 'navi.html' %}#}
+
+    <div id="fh5co-main" style="padding-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div id="fh5co-board" data-columns>
+
+                    {% for link in links %}
+
+                        <div class="item">
+
+                        <div class="animate-box">
+                            <a href="{{ link }}" class="image-popup fh5co-board-img" title={{ 'aaa' }}><img src="{{ link }}" alt="图片显示失败"></a>
+                        </div>
+{#                        <div class="fh5co-desc">#}
+{#                            <a href="pic_viewer/{{ pic.id }}">{{ pic.p_name }}</a>#}
+{#                        </div>#}
+
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'bottom.html' %}
+
+    <!-- jQuery -->
+	<script src="/static/js/jquery-1.12.4.min.js"></script>
+	<!-- Bootstrap -->
+	<script src="/static/js/pblJS/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/static/js/pblJS/jquery.waypoints.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="/static/js/pblJS/jquery.magnific-popup.min.js"></script>
+	<!-- Salvattore -->
+	<script src="/static/js/pblJS/salvattore.min.js"></script>
+	<!-- Main JS -->
+	<script src="/static/js/pblJS/main.js"></script>
+</body>
+</html>
