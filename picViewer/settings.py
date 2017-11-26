@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mcl+cdafl1h12tgu1r3l5ffb^oy_j8_7%xq2kkf#u!s(=apr=+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -81,8 +81,8 @@ DATABASES = {
         'NAME': 'picViewer',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'PASSWORD': 'jiayouPYW7.',
+        'HOST': '47.96.11.146',
     }
 }
 
